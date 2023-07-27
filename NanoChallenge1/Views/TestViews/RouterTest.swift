@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  RouterTest.swift
 //  NanoChallenge1
 //
 //  Created by Rafa (Ruffles) on 25/07/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct RouterTest: View {
     @StateObject var router = Router.shared
 
     var body: some View {
@@ -34,8 +34,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct RouterTest_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        RouterTest()
     }
 }

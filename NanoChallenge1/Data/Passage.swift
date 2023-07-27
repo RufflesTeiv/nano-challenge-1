@@ -18,7 +18,9 @@ struct Passage: Identifiable, Hashable {
     let id = UUID()
     let text : String
     
-    
+    init (text: String) {
+        self.text = text;
+    }
     
 //    let category: Category
 //    let challenge: String
