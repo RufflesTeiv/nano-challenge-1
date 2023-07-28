@@ -11,7 +11,6 @@ import SwiftUI
 class Router : ObservableObject {
     static var shared: Router = {
         let instance = Router()
-        // ... configure the instance
         return instance
     }()
     
@@ -22,7 +21,7 @@ class Router : ObservableObject {
     var navigationStackBinding : Binding<[Int]> = Binding(get: {[]}, set:{_ in })
     
     private init() {
-        passageIdStack = [-1]
+//        passageIdStack = []
         navigationStackBinding = Binding(
             get: {self.passageIdStack},
             set: {
@@ -36,4 +35,13 @@ class Router : ObservableObject {
         self.objectWillChange.send()
     }
     
+    func goBack() -> Void {
+        passageIdStack.removeLast()
+        self.objectWillChange.send()
+    }
+    
+    func clear() -> Void {
+        passageIdStack = []
+        self.objectWillChange.send()
+    }
 }

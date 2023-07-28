@@ -26,6 +26,12 @@ struct RouterTest: View {
                         Button("Go to Next") {
                             router.addToPassageIdStack(passageId: i+1)
                         }
+                        Button("Go back") {
+                            router.goBack()
+                        }
+                        Button("Clear router") {
+                            router.clear()
+                        }
                     }
                 }
                 .navigationTitle("Navigation")

@@ -15,6 +15,8 @@
 		F0A532E02A715C34005810ED /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A532DF2A715C34005810ED /* Router.swift */; };
 		F0A532E42A716191005810ED /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A532E32A716191005810ED /* Utils.swift */; };
 		F0A532E72A72E54F005810ED /* RouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A532E62A72E54F005810ED /* RouterTest.swift */; };
+		F0A532EB2A72FB0F005810ED /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A532EA2A72FB0F005810ED /* Option.swift */; };
+		F0A532ED2A72FEF4005810ED /* PlayerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A532EC2A72FEF4005810ED /* PlayerData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		F0A532DF2A715C34005810ED /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		F0A532E32A716191005810ED /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		F0A532E62A72E54F005810ED /* RouterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterTest.swift; sourceTree = "<group>"; };
+		F0A532EA2A72FB0F005810ED /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
+		F0A532EC2A72FEF4005810ED /* PlayerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,14 +63,14 @@
 		F0A532CD2A7053A8005810ED /* NanoChallenge1 */ = {
 			isa = PBXGroup;
 			children = (
-				F0A532E82A72E573005810ED /* Views */,
-				F0A532E52A72E516005810ED /* Navigation */,
 				F0A532CE2A7053A8005810ED /* NanoChallenge1App.swift */,
 				F0A532D02A7053A8005810ED /* ContentView.swift */,
-				F0A532D22A7053A9005810ED /* Assets.xcassets */,
 				F0A532DC2A706035005810ED /* Data */,
-				F0A532D42A7053A9005810ED /* Preview Content */,
+				F0A532E82A72E573005810ED /* Views */,
+				F0A532E52A72E516005810ED /* Navigation */,
+				F0A532D22A7053A9005810ED /* Assets.xcassets */,
 				F0A532E32A716191005810ED /* Utils.swift */,
+				F0A532D42A7053A9005810ED /* Preview Content */,
 			);
 			path = NanoChallenge1;
 			sourceTree = "<group>";
@@ -83,6 +87,8 @@
 			isa = PBXGroup;
 			children = (
 				F0A532DD2A7151F5005810ED /* Passage.swift */,
+				F0A532EA2A72FB0F005810ED /* Option.swift */,
+				F0A532EC2A72FEF4005810ED /* PlayerData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -183,6 +189,8 @@
 			files = (
 				F0A532E42A716191005810ED /* Utils.swift in Sources */,
 				F0A532E02A715C34005810ED /* Router.swift in Sources */,
+				F0A532ED2A72FEF4005810ED /* PlayerData.swift in Sources */,
+				F0A532EB2A72FB0F005810ED /* Option.swift in Sources */,
 				F0A532D12A7053A8005810ED /* ContentView.swift in Sources */,
 				F0A532DE2A7151F5005810ED /* Passage.swift in Sources */,
 				F0A532E72A72E54F005810ED /* RouterTest.swift in Sources */,
