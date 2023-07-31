@@ -11,6 +11,7 @@ struct ContentView: View {
     @StateObject var router = Router.shared
     @State var mainMenu = false
     let passages = Passage.getPassages()
+    let playerData = PlayerData.shared
 
     var body: some View {
         if (mainMenu) {
@@ -26,20 +27,21 @@ struct ContentView: View {
                     .navigationDestination(for: Int.self) { i in
                         if (i >= 0 && i < passages.count) {
                             let passage = passages[i]
-                            VStack {
-                                Text("Passage \(i)")
-                                Text(passage.text)
-                                Text(Utils.jsonString(from: router.passageIdStack as Any) ?? "Deu merda")
-                                Button("Go to Next") {
-                                    router.addToPassageIdStack(passageId: i+1)
-                                }
-                            }
+//                            VStack {
+//                                Text("Passage \(i)")
+//                                Text(passage.text)
+//                                Text(Utils.jsonString(from: router.passageIdStack as Any) ?? "Deu merda")
+//                                Button("Go to Next") {
+//                                    router.addToPassageIdStack(passageId: i+1)
+//                                }
+//                            }
+                            PassageView(passage: passage)
                             .navigationBarBackButtonHidden(true)
                         } else {
                             Text("Index out of bounds")
                         }
                     }
-                    .navigationTitle("Navigation")
+                    .navigationTitle("Debug screens")
                 }
             }
             

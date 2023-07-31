@@ -15,6 +15,32 @@ class PlayerData : ObservableObject {
     }()
     
 //    @Published var passageIdStack : [Int] = []
+    var name : String = ""
+    var shuffledNameArray : [String] = []
+    var deathCount: Int = -1
+    var deathCountLoop : Int = 0
     
-    private init() {}
+    private init() {
+        reshuffleArray()
+        generateNewPlayer()
+    }
+    
+    func generateNewPlayer() {
+        deathCount += 1
+        if (deathCount >= shuffledNameArray.count) {
+            reshuffleArray()
+        }
+        name = getRandomName()
+    }
+    
+    func reshuffleArray() {
+        shuffledNameArray = Names.names
+        shuffledNameArray.shuffle()
+        deathCountLoop += 1
+        deathCount = 0
+    }
+    
+    private func getRandomName() -> String {
+        return shuffledNameArray[deathCount]
+    }
 }

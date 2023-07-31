@@ -18,10 +18,12 @@ class Router : ObservableObject {
 //        return [-1]
 //    }()
     @Published var passageIdStack : [Int] = []
+    let baseStack : [Int] = [0]
     var navigationStackBinding : Binding<[Int]> = Binding(get: {[]}, set:{_ in })
     
     private init() {
 //        passageIdStack = []
+        clear()
         navigationStackBinding = Binding(
             get: {self.passageIdStack},
             set: {
@@ -41,7 +43,7 @@ class Router : ObservableObject {
     }
     
     func clear() -> Void {
-        passageIdStack = []
+        passageIdStack = baseStack
         self.objectWillChange.send()
     }
 }
