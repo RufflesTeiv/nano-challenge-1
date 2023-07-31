@@ -17,17 +17,25 @@ struct PassageView: View {
                     .resizable()
                     .ignoresSafeArea()
                 VStack(spacing: 50.0) {
-                    ZStack {
-                        Image(passage.backgroundImageName)
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(height: geo.size.height / 2, alignment: .top)
-                            .frame(maxWidth: geo.size.width)
-                        Image(passage.foregroundImageName)
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(height: geo.size.height / 2, alignment: .top)
-                            .frame(maxWidth: geo.size.width)
+                    if (passage.hasImages) {
+                        ZStack {
+                            Image(passage.backgroundImageName)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+//                                .frame(height: geo.size.height / 2, alignment: .top)
+                                .frame(height: geo.size.height / 2)
+                                .frame(maxWidth: .infinity)
+                            if (passage.foregroundImageName != "transparent") {
+                                Image(passage.foregroundImageName)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+    //                                .frame(height: geo.size.height / 2, alignment: .top)
+                                    .frame(height: geo.size.height / 2)
+                                    .frame(maxWidth: .infinity)
+                            }
+                            Image("vignette")
+                                .resizable()
+                        }
                     }
 //                    .frame(maxWidth: geo.size.width)
 //                    .frame(height: geo.size.height / 2, alignment: .top)

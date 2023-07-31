@@ -19,6 +19,7 @@ class PlayerData : ObservableObject {
     var shuffledNameArray : [String] = []
     var deathCount: Int = -1
     var deathCountLoop : Int = 0
+    var siteNumber : Int = 3
     
     private init() {
         reshuffleArray()
@@ -31,6 +32,7 @@ class PlayerData : ObservableObject {
             reshuffleArray()
         }
         name = getRandomName()
+        siteNumber = Int.random(in: 3..<201)
     }
     
     func reshuffleArray() {
